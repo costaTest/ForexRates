@@ -8,8 +8,14 @@ function App() {
       <header className="App-header">
         <img src={logo} alt="logo" />
       </header>
-      <CurrencyPair pair='USDGBP'/>
-      <CurrencyPair pair='USDEUR'/>
+      <CurrencyPair base='USD' quote="GBP"/>
+      <CurrencyPair base='USD' quote="EUR"/>
+      <CurrencyPair base='USD' quote="CAD"/>
+      <CurrencyPair base='EUR' quote="GBP"/>
+      <CurrencyPair base='EUR' quote="CHF"/>
+      <CurrencyPair base='USD' quote="JPY"/>
+      <CurrencyPair base='GBP' quote="JPY"/>
+      <CurrencyPair base='GBP' quote="EUR"/>
     </div>
   );
 }

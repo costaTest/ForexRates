@@ -5,37 +5,34 @@ export default class CurrencyPair extends Component {
     super(props)
     this.state = {
       isLoaded : false,
-      pair : props.pair,
+      base : props.base.toLowerCase(),
+      quote : props.quote.toLowerCase(),
       rate : 0
     };
   }
 
   componentDidMount(){
-    /*fetch('http://api.currencylayer.com/live?access_key=a1a6f8b7f8f9f8a488cb575bfed862b9&currencies=EUR,GBP')
+    let url = `https://cdn.jsdelivr.net/gh/fawazahmed0/currency-api@1/latest/currencies/${this.state.base}/${this.state.quote}.json` 
+    fetch(url)
     .then(res => res.json())
     .then(json => {
-      let rate = JSON.parse(json).quotes[this.props.pair];
-      console.log(json);
+      let rate = json[this.state.quote];
       this.setState({
         isLoaded: true,
         rate: rate
       })
-    });*/
-    let j = JSON.parse('{"success":true,"terms":"https://currencylayer.com/terms","privacy":"https://currencylayer.com/privacy","timestamp":1647418263,"source":"USD","quotes":{"USDEUR":0.911785,"USDGBP":0.766635}}');
-    let rate = j.quotes[this.props.pair];
-    this.setState({
-      isLoaded: true,
-      rate: rate
     });
   }
 
 
   render() {
-    let {isLoaded, pair, rate} = this.state;
+    let {isLoaded, base, quote, rate} = this.state;
+
+    let pair = `${base.toUpperCase()} / ${quote.toUpperCase()}`;
 
     return (
       <div className="panel panel-default">
-      <h1>{pair}</h1>
+      <h2>{pair}</h2>
       {isLoaded?rate:'Loading...'}
       </div>   
     );
