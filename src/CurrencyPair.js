@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import './Styles.css';
 
 export default class CurrencyPair extends Component {
   constructor(props) {
@@ -31,7 +32,7 @@ export default class CurrencyPair extends Component {
     let pair = `${base.toUpperCase()} / ${quote.toUpperCase()}`;
 
     return (
-      <div className="panel panel-default">
+      <div className="flex-item">
       <h2>{pair}</h2>
       {isLoaded?rate:'Loading...'}
       </div>   
