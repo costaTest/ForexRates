@@ -1,4 +1,3 @@
-import logo from './logo.png';
 import CurrencyPair from './CurrencyPair';
 import './Styles.css';
 
