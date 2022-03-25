@@ -13,18 +13,17 @@ export default class CurrencyPair extends Component {
   }
 
   componentDidMount(){
-    let url = `https://cdn.jsdelivr.net/gh/fawazahmed0/currency-api@1/latest/currencies/${this.state.base}/${this.state.quote}.json` 
+    let url = `api/rate?base=${this.state.base}&quote=${this.state.quote}` 
     fetch(url)
     .then(res => res.json())
     .then(json => {
-      let rate = json[this.state.quote];
+      let rate = json['rate'];
       this.setState({
         isLoaded: true,
         rate: rate
       })
     });
   }
-
 
   render() {
     let {isLoaded, base, quote, rate} = this.state;

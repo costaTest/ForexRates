@@ -37,6 +37,7 @@
     ]
   },
   "devDependencies": {
-    "netlify-cli": "^9.13.4"
+    "netlify-cli": "^9.13.4",
+    "node-fetch": "^2.6.7"
   }
 }
