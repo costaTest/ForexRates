@@ -1,5 +1,5 @@
 import CurrencyPair from './CurrencyPair';
-import './Styles.css';
+import './styles.css';
 
 function App() {
   return (
@@ -21,6 +21,7 @@ function App() {
         <CurrencyPair base='GBP' quote="AUD"/>
         <CurrencyPair base='GBP' quote="JPY"/>
       </div>
+      <div className="footer-text">Exchange rates as of 00:00UTC</div>
     </div>
   );
 }

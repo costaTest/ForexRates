@@ -19,12 +19,12 @@
   font-size: 15px;
   text-align: center;
   justify-content: center;
-  padding: 10px;
+  padding: 7px;
   background-color: #030f20;
 }
 
 .flex-item {
-  background-color: #b5b6b8;
+  background-color: #9eacc9;
   border-radius: 6px;
   overflow: hidden;
   padding: 10px;
@@ -38,3 +38,8 @@ body {
   background-color: #010914;
 }
 
+.footer-text {
+  color: rgb(133, 133, 133);
+  font-style: italic;
+  padding: 15px;
+}
